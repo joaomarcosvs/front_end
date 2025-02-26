@@ -27,7 +27,7 @@ main{
 }
 
 img{
-    border-radius: 15px;
+    border-radius: 0.93rem; /* Para mudar para REM deve pegar o valor em PIXEL e dividir por 16*/
 }
 
 /* Tags "secundarias" */
