@@ -1,0 +1,159 @@
+/* Importação de fonte*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Variaveis */
+
+:root{
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --azul-botao: #167df7;
+    --cor-de-fundo: #00030c;
+    --fonte-principal: 'Inter';
+}
+
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estrutura do main */
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Primeira Section*/
+
+.section__principal{
+    background-image: url(../Imagens/Background.png);   /* Serve apenas para quando não faz sentido para o usuarios, apenas decorativo*/
+    background-repeat: none;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.cont{   /* Section*/
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cont__caixa{
+    margin: 0 6em;   /* Quando usado apenas 2 valores a atribuição são para superior e inferior e esquerda e direita respectivamente*/
+
+}
+
+.cont__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.cont__img{
+    margin: 2em 0 2em 0; /* Como outras atribuições com 4 valores, são respectivamente: superior, direito, inferior  e esquerdo*/
+
+}
+
+.cont__botao{
+    background-color: var(--azul-botao);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1em;   /* x Vezes o tamanho da fonte*/
+    color: var(--branco-principal);
+    display: block;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.cont__botao__alura{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.cont__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+/* Segunda Section*/
+
+.section__secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.img__secundario{
+    width: 80%;
+}
+
+.desc__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.desc__texto{
+    color: var(--cinza-secundario);
+}
+
+/* Terceira Section*/
+
+.botao__telas{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.cont__desc{
+    padding: 2em;
+}
+
+/* Quarta Section*/
+
+.dispotivos{
+    text-align: center;
+}
+
+.dispo__titulo{
+    padding-bottom: 1em;
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.dispo__lista{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 5em 0;
+}
+
+.lista__itens{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+footer ul li a{
+    font-family: var(--fonte-principal);
+    color: var(--cinza-secundario);
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
