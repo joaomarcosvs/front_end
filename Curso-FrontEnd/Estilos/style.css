@@ -38,12 +38,10 @@ header{
 
 header nav{
     display: flex;
-    gap: 80px;
 }
 
 header nav a { /* Ancoras da nav bar*/
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
     font-weight: 600;
     color: #22d4fd;
     text-decoration: none;
@@ -51,7 +49,6 @@ header nav a { /* Ancoras da nav bar*/
 
 h1 {
     color: #f6f6f6;
-    font-size: 36px;
     font-family: "Krona One", sans-serif;
 }
 
@@ -61,16 +58,13 @@ h1 strong {
 
 p {
     color: #f6f6f6;
-    font-size: 24px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
 }
 
 .main__conteudo{
-    width: 615px;   /* Tamanho do bloco que fica o titulo, paragrafo e ancoras */
     display: flex;
     flex-direction: column;
-    gap: 40px;   /* Gap é o espaçamento entre os elementos do container, nese caso entre o bloco de titulo e texto e o bloco de botoes*/
 }
 
 section div{   /* Esse é a divisão das ancoras na section*/
@@ -78,14 +72,12 @@ section div{   /* Esse é a divisão das ancoras na section*/
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
 }
 
 section div h2{   /* Sub titulo "Acesse minhas redes:"*/
     color: white;
     font-family: "Krona One", sans-serif;
     font-weight: 400;
-    font-size: 24px;
 }
 
 section div a {   /* Ancoras*/
@@ -96,7 +88,6 @@ section div a {   /* Ancoras*/
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-    border-radius: 8px;
     text-decoration: none;
     color: #f6f6f6;
     border: 2px solid #22d4fd;   /*Os valores no border são respctivamente: largura, estilo da borda e cor */
@@ -105,16 +96,13 @@ section div a {   /* Ancoras*/
 section div a:hover{
     background-color: #22d4fd;
     color: black;
-    border: 2px solid #f6f6f6;
     transition: 0.6s;
 }
 
 footer{
     background-color: #22d4fd;
-    padding: 24px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
     font-weight: 400;
 }
 
