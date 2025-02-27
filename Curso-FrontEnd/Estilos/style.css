@@ -23,48 +23,76 @@ main{
     align-items: center;
     justify-content: space-between;   /* Dessa forma os elementos filhos ficam com um espaço entre eles*/
     padding: 5% 15%;
-
+    gap: 82px;
 }
 
-img{
-    border-radius: 0.93rem; /* Para mudar para REM deve pegar o valor em PIXEL e dividir por 16*/
+main img{
+    border-radius: 15px; 
+    width: 50%;
 }
 
 /* Tags "secundarias" */
 
 header{
-    padding: 2% 0% 0% 15%; /* A ordem dos valores são respectivamente: superior, direita, inferior e esquerda*/
+    padding: 3% 0% 0% 15%; /* A ordem dos valores são respectivamente: superior, direita, inferior e esquerda*/
 }
 
 header nav{
     display: flex;
+    gap: 80px;
 }
 
 header nav a { /* Ancoras da nav bar*/
     font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem; /* Para mudar para REM deve pegar o valor em PIXEL e dividir por 16 -- Só se aplica pra font-size*/
     font-weight: 600;
-    color: #22d4fd;
+    color: #026773;
     text-decoration: none;
 }
 
 h1 {
-    color: #f6f6f6;
+    color: #F2E3D5;
+    font-size: 2.25rem;
     font-family: "Krona One", sans-serif;
 }
 
 h1 strong {
-    color: #22d4fd;
+    color: #026773;
+}
+
+h2 {
+    color: #F2E3D5;
+    font-size: 2.25rem;
+    font-family: "Krona One", sans-serif;
+}
+
+h2 strong {
+    color: #026773;
 }
 
 p {
-    color: #f6f6f6;
+    color: #F2E3D5;
+    font-size: 1.5rem;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
 }
 
-.main__conteudo{
+.main__conteudo{ /* Section */
+    width: 50%;   /* Tamanho do bloco que fica o titulo, paragrafo e ancoras */
     display: flex;
     flex-direction: column;
+    gap: 40px;   /* Gap é o espaçamento entre os elementos do container, nese caso entre o bloco de titulo e texto e o bloco de botoes*/
+}
+
+.section__fotos{
+    width: 50%;   /* Tamanho do bloco que fica o titulo, paragrafo e ancoras */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section__fotos img {
+    width: auto;
 }
 
 section div{   /* Esse é a divisão das ancoras na section*/
@@ -72,40 +100,82 @@ section div{   /* Esse é a divisão das ancoras na section*/
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 32px;
 }
 
 section div h2{   /* Sub titulo "Acesse minhas redes:"*/
-    color: white;
+    color: #F2E3D5;
     font-family: "Krona One", sans-serif;
     font-weight: 400;
+    font-size: 1.5rem;
 }
 
 section div a {   /* Ancoras*/
-    width: 378px;
+    width: 50%;
     padding-top: 21.5px;
     padding-bottom: 21.5px;
     font-family: "Montserrat", sans-serif;  
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
+    border-radius: 8px;
     text-decoration: none;
-    color: #f6f6f6;
-    border: 2px solid #22d4fd;   /*Os valores no border são respctivamente: largura, estilo da borda e cor */
+    color: #F2E3D5;
+    border: 2px solid #026773;   /*Os valores no border são respctivamente: largura, estilo da borda e cor */
 }
 
 section div a:hover{
-    background-color: #22d4fd;
+    background-color: #026773;
     color: black;
+    border: 2px solid #F2E3D5;
     transition: 0.6s;
 }
 
+ul{
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    color: #F2E3D5;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+ul a{
+    text-decoration: none;
+    color: #026773;
+    font-family: "Montserrat", sans-serif;
+}
+
 footer{
-    background-color: #22d4fd;
+    background-color: #026773;
+    padding: 24px;
     text-align: center;
     font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
 footer p {
     color: black;
+}
+
+@media (max-width: 1200px) {
+
+    header {
+        padding: 5% 0% 0% 0%;
+    }
+
+    header nav{
+        justify-content: center;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .main__conteudo{
+        width: auto; /* Auto = automatico, serve para definir o padding certo automaticamente*/
+    }
+
 }
