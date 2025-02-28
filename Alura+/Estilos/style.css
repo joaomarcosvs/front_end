@@ -71,9 +71,22 @@ body{
     padding: 1em;
 }
 
+.cont__botao:hover{
+    color: #bbbbbb;
+    background-color: #052853;
+    transition: 0.3s;
+}
+
 .cont__botao__alura{
     background-color: transparent;
     border: 2px solid var(--branco-principal);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1em;   /* x Vezes o tamanho da fonte*/
+    color: var(--branco-principal);
+    display: block;
+    margin-bottom: 1em;
+    padding: 1em;
 }
 
 .cont__aviso{
@@ -142,18 +155,29 @@ body{
 
 footer{
     text-align: center;
+    margin: 5em 3em;
 }
 
 footer ul{
     display: flex;
-    list-style: none;
-    
+    list-style: none;    
+    justify-content: center;
+    margin-top: 1em;
 }
 
 footer ul li a{
-    font-family: var(--fonte-principal);
-    color: var(--cinza-secundario);
-    list-style: none;
+    color: var(--branco-principal);
     text-decoration: none;
-    text-align: center;
+    margin-left: 1.5em;
+}
+
+footer ul li a:hover{
+    color: var(--azul-botao);
+    transition: 0.3s;
+}
+
+footer p{
+    margin: 2em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
 }
