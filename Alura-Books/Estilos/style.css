@@ -1,0 +1,151 @@
+/* Impotações*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variaveis*/
+
+:root{
+    --cor-de-fundo: #dededf;
+    --branco: #ffffff;
+    --laranja: #eb9800;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --fonte-menu: 'Poppins', Serif;
+}
+
+/* Estrutura */
+
+body{
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-menu);
+    font-size: 16px;
+}
+
+/* Header */
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cont{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__menu{
+    width: 24px;
+    height: 24px;
+    background-image: url(../Imagens/Menu.png);
+    display: inline-block; /* De acordo com a Prof, o inline block serve para permissão na alteração de largura e altura.*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cont__img{
+    padding: 1em;
+}
+
+.lista__menu{
+    display: none;
+    position: absolute; /* Duas explicações aqui, no cabeçalho o position esta relativo apenas para que eu possa usar o position absolute em um dos seus filho, nesse caso no menu. Absolute faz com que o elemento fique acima do elemento pai, então a lista ficou em cima da imagem menu.*/
+    top: 100%; /* Aqui está top 100%, para que a lista fique 100% "fora" do cabeçalho, que como falei acima é a posição absoluta dele*/
+    width: 60vw;
+}
+
+.cont__botao:checked ~ .lista__menu{ /* ~é um combinador, oque é? Tenho que estudar*/
+    display: block ;
+}
+
+.lista__menu__titulo, .lista__menu__link{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista__menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista__menu__link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.cont__botao{
+    display: none;
+}
+
+/* Banner */
+
+.banner{
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+}
+
+.banner__titulo{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner__texto{
+    font-weight: 500;
+    margin: 1em;
+}
+
+.banner__pesquisa{
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+}
+
+.banner__pesquisa::placeholder{
+    font-family: var(--fonte-menu);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--branco);
+    background: url(../Imagens/Vector.png) no-repeat;
+    background-position: 2em;
+}
+
+/*Carrossel*/
+
+.carrossel__titulo{
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 0.5em 0;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    display: none;
+}
+
+.swiper-slide{
+    margin: 0;
+}
+
+.swiper-pagination{
+    position: initial;
+    margin: 0.5em;
+}
