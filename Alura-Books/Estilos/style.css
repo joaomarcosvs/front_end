@@ -1,6 +1,7 @@
 /* Impotações*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* Variaveis*/
 
@@ -9,7 +10,10 @@
     --branco: #ffffff;
     --laranja: #eb9800;
     --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --azul: #002f52;
+    --preto: #0000000;
     --fonte-menu: 'Poppins', Serif;
+    --fonte-secudaria:'Josefin Sans';
 }
 
 /* Estrutura */
@@ -83,6 +87,14 @@ body{
     display: none;
 }
 
+.cont__titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
 /* Banner */
 
 .banner{
@@ -148,4 +160,193 @@ body{
 .swiper-pagination{
     position: initial;
     margin: 0.5em;
+}
+
+/* Apos o carrosel*/
+
+.card__desc{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card__botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes{
+    display: flex;
+}
+
+.card{
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+}
+
+.desc__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.desc__titulo__livro{
+    color: var(--azul);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.desc__texto{
+    font-size: 14px;
+}
+
+.botoes__itens{
+    margin: 0 0.5em;
+}
+
+.botoes__anc{
+    background-color: var(--laranja);
+    padding: 1em 2.2em;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.desc__avaliacao{
+    margin-bottom: 0.5em;
+}
+
+.desc__img{
+    border-radius: 6px;
+}
+
+/* Topicos */
+
+.topicos{
+    background: var(--azul-degrade);
+    text-align: center;
+    padding: 1em 0;
+}
+
+.topicos__titulo{
+    color: var(--branco);
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.topicos__lista{
+    display: flex;
+    flex-wrap: wrap; /* Wrap faz com que a quebra de linha acontece quando o texto chega no final da tela.*/
+    justify-content: center;
+}
+
+.topicos__anc{
+    color: var(--branco);
+    background-color: var(--laranja);
+    padding: 1em;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 7px;
+}
+
+.topicos__itens{
+    margin: 1.5em 0.5em;
+}
+
+/* Contato */
+
+.contato{
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+.contato__titulo, .contato__texto{
+    background: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Esse clipe é apenas para definir que a cor posta no background vai ficar no texto*/
+}
+
+.contato__titulo{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contato__texto{
+    font-weight: 300;
+    margin: 1em 0;
+}
+
+.contato__email{
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    width: 90%;
+    color: var(--azul);
+}
+
+.contato__email::placeholder{
+    font-family: var(--fonte-menu);
+    color: var(--azul);
+    background: url(../Imagens/email.svg) no-repeat;
+    padding-left: 2em;
+}
+
+/* Footer */
+
+hr{
+    margin: 0;
+}
+
+.rodape{
+    background-color: var(--branco);
+    padding: 1em; 
+}
+
+/* Media Querry TABLET*/
+
+@media screen and (min-width: 1024px){ /*Aqui estamos fazedo MIN porque começamos do mobile, se form começar pelo tamanha desktop seria MAX-width*/
+
+    /* Header */
+
+    .cont__titulo, .cont__titulo__negrito{
+        font-family: var(--fonte-secudaria);
+        font-size: 30px;
+    }
+
+    .cont__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .cont__titulo__negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__itens{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__anc {
+        text-decoration: none;
+        color: var(--preto);
+    }
+    
+    .cont__img__transparent{
+        display: none;
+    }
+
+    .cabecalho__menu{
+        display: none;
+    }
 }
