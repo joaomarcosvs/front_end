@@ -14,6 +14,8 @@
     --preto: #0000000;
     --fonte-menu: 'Poppins', Serif;
     --fonte-secudaria:'Josefin Sans';
+    --cinza: #474646;
+    --cinza-claro: #858585;
 }
 
 /* Estrutura */
@@ -88,6 +90,10 @@ body{
 }
 
 .cont__titulo{
+    display: none;
+}
+
+.cont__texto{
     display: none;
 }
 
@@ -308,6 +314,10 @@ hr{
     padding: 1em; 
 }
 
+.lista__rodape{
+    display: none;
+}
+
 /* Media Querry TABLET*/
 
 @media screen and (min-width: 1024px){ /*Aqui estamos fazedo MIN porque começamos do mobile, se form começar pelo tamanha desktop seria MAX-width*/
@@ -348,5 +358,216 @@ hr{
 
     .cabecalho__menu{
         display: none;
+    }
+
+    .opcoes__botao:checked ~ .lista__menu{
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    /* Banner*/
+
+    .banner__tituo{
+        font-size: 36px;
+    }
+
+    .banner__pesquisa{
+        width: 50%;
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 7em;
+    }
+
+    /* Carrosel */
+
+    .carrossel__titulo{
+        font-size: 26px;
+    }
+
+    .swiper-pagination{
+        margin: 2em 0 3em 0;
+    }
+
+    .swiper{
+        width: 60%;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        display: block;
+        top: 60%;
+    }
+
+    /* Card */
+
+    .card{
+        margin: 2em auto;
+        width: 40%;
+    }
+
+    /* Topicos */
+
+    .topicos__titulo{
+        font-size: 24px;
+    }
+
+    .topicos__anc{
+        font-size: 18px;
+    }
+
+    /* Contato */
+
+    .contato{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato__email{
+        width: 30%;
+    }
+
+    .contato__desc{
+        margin-right: 1em;
+        width: 30%;
+    }
+
+    .contato__titulo{
+        font-size: 24px;
+    }
+
+    /* Footer */
+
+    .rodape{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .lista__rodape{
+        display: block;
+    }
+    
+
+    .lista__rodape__item{
+        display: flex;
+        align-items: center;
+        margin: 0.6em 0;
+    }
+
+    .lista__rodape__anc{
+        color: var(--cinza);
+        text-decoration: none;
+        margin-left: 0.6em;
+    }
+
+    .lista__rodape__titulo{
+        color: var(--cinza-claro);
+        font-size: 14px;
+    }
+
+    .rodape__titulo{
+        font-size: 24px;
+        color: var(--preto);
+    }
+
+}
+
+/* Media Querry DESKTOP*/
+
+@media screen and (min-width: 1728px){ /*Aqui estamos fazedo MIN porque começamos do mobile, se form começar pelo tamanha desktop seria MAX-width*/
+
+    /* Header */
+
+    .cont__anc{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .cont__texto{
+        display: block;
+    }
+
+    .cabecalho{
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+
+    /* Banner*/
+
+    .banner__pesquisa{
+        width: 35%;
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 10em;
+    }
+
+    .banner{
+        padding: 6em;
+    }
+
+    /* Carrsoeel */
+
+    .carrossel__cont{
+        display: flex;
+        margin: 0 20vw 3em 20vw;
+        align-items: center;
+    }
+
+    .swiper-pagination{
+        margin: 1em 0;
+    }
+
+    .swiper{
+        width: 50%;
+    }
+
+    .desc__titulo{
+        font-size: 32px;
+    }
+
+    .desc__texto{
+        font: 16px;
+    }
+
+    .card{
+        width: 60%;
+        margin-left: 3em;
+    }
+
+    .desc{
+        margin-right: 2em;
+    }
+
+    /* Topicos */
+
+    .topicos{
+        padding: 3em 30vw;
+    }
+
+    /* Contato */
+
+    .contato{
+        padding: 3em 20vw;
+    }
+
+    /* Footer */
+
+    .lista__rodape{
+        border-left: 1px solid var(--cinza-claro);
+        padding-left: 1em;
+    }
+
+    .rodape{
+        padding: 3em 0;
     }
 }
